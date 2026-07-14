@@ -122,6 +122,7 @@ function initEvents() {
 
   // Cart open/close
   document.getElementById('cartBtn')?.addEventListener('click', bukaCart);
+  document.getElementById('cartBtnHeader')?.addEventListener('click', bukaCart);
   document.getElementById('cartClose')?.addEventListener('click', tutupCart);
   document.getElementById('cartOverlay')?.addEventListener('click', tutupCart);
 
