@@ -122,7 +122,6 @@ function initEvents() {
 
   // Cart open/close
   document.getElementById('cartBtn')?.addEventListener('click', bukaCart);
-  document.getElementById('cartBtnHeader')?.addEventListener('click', bukaCart);
   document.getElementById('cartClose')?.addEventListener('click', tutupCart);
   document.getElementById('cartOverlay')?.addEventListener('click', tutupCart);
 
@@ -455,6 +454,10 @@ function initHeaderScroll() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) header?.classList.add('scrolled');
     else header?.classList.remove('scrolled');
+
+    // Tutup otomatis menu mobile (hamburger) begitu mulai scroll,
+    // biar nggak "nyangkut" ketinggalan nge-halangin konten di HP
+    document.querySelector('.nav-list')?.classList.remove('open');
   });
 }
 
